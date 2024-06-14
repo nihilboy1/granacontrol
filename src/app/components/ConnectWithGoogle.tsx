@@ -17,25 +17,16 @@ export function ConnectWithGoogle() {
           opacity: 1,
           scale: 1,
           width: 0,
-          transition: {
-            duration: 0.2,
-            ease: "easeOut",
-          },
         }}
         whileHover={{
-          borderBottom: "1px solid #FFFFFF",
+          borderBottom: "1px solid #eff28d",
           width: "16rem",
           scale: 1.01,
-          transition: {
-            duration: 0.2,
-          },
+          fontWeight: "bold",
         }}
         className="text-white w-fit mx-auto flex flex-col items-center mt-[3rem] "
       >
-        <span className="w-[15rem]">
-          Ou entre com sua conta{" "}
-          <strong className="text-primary ">Google</strong>
-        </span>
+        <span className="w-[15rem]">Ou entre com sua conta Google</span>
       </motion.button>
       <motion.div
         initial={{
@@ -45,10 +36,6 @@ export function ConnectWithGoogle() {
         animate={{
           opacity: 1,
           scale: 1,
-          transition: {
-            duration: 0.2,
-            ease: "easeInOut",
-          },
         }}
         className="mt-1 flex self-center"
       >

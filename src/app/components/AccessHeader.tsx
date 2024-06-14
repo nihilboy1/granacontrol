@@ -11,10 +11,6 @@ export function AccessHeader({ description }: { description: string }) {
       animate={{
         opacity: 1,
         scale: 1,
-        transition: {
-          duration: 0.2,
-          ease: "easeOut",
-        },
       }}
       className="flex flex-col gap-3 w-full items-center"
     >

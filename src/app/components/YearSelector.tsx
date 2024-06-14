@@ -10,9 +10,16 @@ import {
 } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
 
-export function YearSelector() {
+interface YearSelectorProp {
+  yearSelected: string;
+  setYearSelected: (value: string) => void;
+}
+
+export function YearSelector({
+  yearSelected,
+  setYearSelected,
+}: YearSelectorProp) {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedYear, setSelectedYear] = useState("ANO");
 
   useEffect(() => {
     const handleStyleChanges = () => {
@@ -47,7 +54,7 @@ export function YearSelector() {
         return (
           <>
             <MenuButton className="w-[5rem] bg-white tracking-widest shadow-lg text-background flex justify-between items-center gap-1 rounded-md py-1 px-2 font-semibold ">
-              {selectedYear}
+              {yearSelected}
               <ChevronDownIcon
                 className={`size-4 fill-background transition-transform duration-200 ${
                   open ? "rotate-180" : "rotate-0"
@@ -69,15 +76,7 @@ export function YearSelector() {
                 <MenuItem>
                   <button
                     className="hover:bg-primary hover:font-bold text-center w-full rounded-lg py-1.5 px-3"
-                    onClick={() => setSelectedYear("2023")}
-                  >
-                    2023
-                  </button>
-                </MenuItem>
-                <MenuItem>
-                  <button
-                    className="hover:bg-primary hover:font-bold text-center w-full rounded-lg py-1.5 px-3"
-                    onClick={() => setSelectedYear("2024")}
+                    onClick={() => setYearSelected("2024")}
                   >
                     2024
                   </button>
@@ -85,7 +84,7 @@ export function YearSelector() {
                 <MenuItem>
                   <button
                     className="hover:bg-primary hover:font-bold text-center w-full rounded-lg py-1.5 px-3"
-                    onClick={() => setSelectedYear("2025")}
+                    onClick={() => setYearSelected("2025")}
                   >
                     2025
                   </button>
