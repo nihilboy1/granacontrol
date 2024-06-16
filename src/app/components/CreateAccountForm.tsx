@@ -1,4 +1,5 @@
-"use client";
+'use client'
+
 import { Input } from "./Input";
 import { User, Envelope, Password } from "@phosphor-icons/react/dist/ssr";
 import { AccessButtons } from "./AccessButtons";

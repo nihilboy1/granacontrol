@@ -6,6 +6,7 @@ export function ReturnButton() {
   const router = useRouter();
   return (
     <motion.button
+      className="mt-[-0.5rem] sm:mt-0"
       onClick={() => {
         router.back();
       }}

@@ -1,15 +1,20 @@
-"use client";
+'use client'
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 
-interface MonthButtonProps {
+interface PeriodButtonProps {
   monthLabel: string;
 }
 
-export function MonthButton({ monthLabel }: MonthButtonProps) {
+export function PeriodButton({ monthLabel }: PeriodButtonProps) {
   const router = useRouter();
+  function handleNavigateToPeriod() {
+    const sanitizedMonthLabel = monthLabel
+      .replace(/[^a-zA-Z0-9]/g, "")
+      .toLowerCase();
+    router.push(`periodsdashboard/${sanitizedMonthLabel}`);
+  }
 
-  function handleNavigateToPeriod() {}
   return (
     <motion.button
       initial={{
@@ -22,11 +27,11 @@ export function MonthButton({ monthLabel }: MonthButtonProps) {
       }}
       whileHover={{
         backgroundColor: "#EFF28D",
-        scale: 1.4,
+        scale: 1.2,
         marginTop: 10,
         marginBottom: 10,
       }}
-      className="bg-white rounded-md p-4 px-10 text-xl font-bold shadow-lg  sm:text-2xl sm:px-14 "
+      className="bg-white rounded-md p-3 px-10 text-xl font-bold shadow-lg  sm:text-2xl "
       onClick={handleNavigateToPeriod}
     >
       {monthLabel}

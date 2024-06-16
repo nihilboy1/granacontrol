@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -22,7 +24,7 @@ export function AccessButtons({
         whileHover={{
           scale: 1.02,
         }}
-        className="bg-primary font-bold p-4 rounded-md mt-12 hover:"
+        className="bg-primary font-bold p-4 rounded-md mt-12"
       >
         {mainButtonText}
       </motion.button>

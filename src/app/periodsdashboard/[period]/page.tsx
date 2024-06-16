@@ -6,18 +6,18 @@ export default function Period({ params }: { params: { period: string } }) {
 
   const validYears = ["2024", "2025"];
   const validMonths = [
-    "jan",
-    "fev",
-    "mar",
-    "abr",
-    "mai",
-    "jun",
-    "jul",
-    "ago",
-    "set",
-    "out",
-    "nov",
-    "dez",
+    "jan01",
+    "fev02",
+    "mar03",
+    "abr04",
+    "mai05",
+    "jun06",
+    "jul07",
+    "ago08",
+    "set09",
+    "out10",
+    "nov11",
+    "dez12",
   ];
 
   const year = period.slice(0, 4);
